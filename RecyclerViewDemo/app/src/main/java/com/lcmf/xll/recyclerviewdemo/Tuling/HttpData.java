@@ -1,0 +1,66 @@
+package com.lcmf.xll.recyclerviewdemo.Tuling;
+
+import android.os.AsyncTask;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+/**
+ * Created by Administrator on 2017/5/30 0030.
+ */
+
+public class HttpData extends AsyncTask<String, Void, String> {
+
+	//variable
+	private HttpClient mHttpClient;
+	private HttpGet mHttpGet;
+	private HttpResponse mHttpResponse;
+	private HttpEntity mHttpEntity;
+	private InputStream in;
+	private HttpGetDataListener mHttpGetDataListener;
+
+	private String url;
+	public HttpData(String url,HttpGetDataListener mHttpGetDataListener)
+	{
+		super();
+		this.url = url;
+		this.mHttpGetDataListener = mHttpGetDataListener;
+	}
+
+	@Override
+	protected String doInBackground(String... params) {
+		try
+		{
+			mHttpClient = new DefaultHttpClient();
+			mHttpGet = new HttpGet(url);
+			mHttpResponse = mHttpClient.execute(mHttpGet);
+			mHttpEntity = mHttpResponse.getEntity();
+			in = mHttpEntity.getContent();
+			BufferedReader br = new BufferedReader(new InputStreamReader(in));
+			String line = null;
+			StringBuffer sb = new StringBuffer();
+			while((line = br.readLine()) != null)
+			{
+				sb.append(line);
+			}
+			return sb.toString();
+		}catch (Exception e)
+		{
+
+		}
+		return null;
+	}
+
+	@Override
+	protected void onPostExecute(String result) {
+		mHttpGetDataListener.GetDataUrl(result);
+		super.onPostExecute(result);
+	}
+}
