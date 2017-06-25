@@ -51,10 +51,11 @@
 
         <activity android:name=".xunfei.XunFeiActivity"></activity>
 
-        <activity android:name=".FileSave.TextSave">
-        </activity>
+        <activity android:name=".FileSave.TextSave"></activity>
 
         <activity android:name=".FileSave.LitepalSave"></activity>
+
+        <activity android:name=".LoadActivity"></activity>
 
     </application>
 
