@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:lcmf="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.lcmf.xll.recyclerviewdemo.DefView.TopBar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/id_topbar"
+        lcmf:leftText="Back"
+        lcmf:leftTextBackground="@drawable/left"
+        lcmf:leftTextColor="#FFFFFF"
+        lcmf:rightText="Back"
+        lcmf:rightTextBackground="@drawable/right"
+        lcmf:rightTextColor="#FFFFFF"
+        lcmf:title="自定义标题"
+        lcmf:titleTextColor="#FFF000"
+        lcmf:titleTextSize="10sp">
+    </com.lcmf.xll.recyclerviewdemo.DefView.TopBar>
+
+</RelativeLayout>

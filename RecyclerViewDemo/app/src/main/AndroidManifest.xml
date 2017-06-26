@@ -57,6 +57,8 @@
 
         <activity android:name=".LoadActivity"></activity>
 
+        <activity android:name=".DefView.DefViewActivity"></activity>
+
     </application>
 
 </manifest>

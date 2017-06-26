@@ -7,4 +7,16 @@
     <declare-styleable name="SlidingMenu">
         <attr name="rightPadding"></attr>
     </declare-styleable>
+
+    <declare-styleable name="TopBar">
+        <attr name="title" format="string"></attr>
+        <attr name="titleTextSize" format="dimension"></attr>
+        <attr name="titleTextColor" format="color"></attr>
+        <attr name="leftTextColor" format="color"></attr>
+        <attr name="leftTextBackground" format="reference|color"></attr>
+        <attr name="leftText" format="string"></attr>
+        <attr name="rightTextColor" format="color"></attr>
+        <attr name="rightTextBackground" format="reference|color"></attr>
+        <attr name="rightText" format="string"></attr>
+    </declare-styleable>
 </resources>

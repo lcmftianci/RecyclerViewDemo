@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:lcmf="http://schemas.android.com/apk/res/com.lcmf.xll.recyclerviewdemo"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_frame_background">
 
     <com.lcmf.xll.recyclerviewdemo.view.SlidingMenu
         android:layout_width="match_parent"
@@ -26,8 +27,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="toggleMenu"
+                    android:layout_gravity="bottom"
                     android:text="菜单"/>
             </LinearLayout>
+
         </LinearLayout>
     </com.lcmf.xll.recyclerviewdemo.view.SlidingMenu>
 
