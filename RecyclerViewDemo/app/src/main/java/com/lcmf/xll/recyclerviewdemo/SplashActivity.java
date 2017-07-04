@@ -11,6 +11,9 @@ import android.widget.ImageView;
 
 import com.iflytek.cloud.SpeechUtility;
 import com.lcmf.xll.recyclerviewdemo.DefView.DefViewActivity;
+import com.lcmf.xll.recyclerviewdemo.ScreenRecoder.ScreenRecoderActivity;
+import com.lcmf.xll.recyclerviewdemo.fragment.FragmentNestActivity;
+import com.lcmf.xll.recyclerviewdemo.fragment.GLFragment.GLFragmentActivity;
 import com.lcmf.xll.recyclerviewdemo.xunfei.XunFeiActivity;
 
 /**
@@ -44,7 +47,7 @@ public class SplashActivity extends Activity {
 			editor.putInt("times", 2);
 			editor.apply();
 		}else{
-			Intent intent = new Intent(SplashActivity.this, DefViewActivity.class);
+			Intent intent = new Intent(SplashActivity.this, ScreenRecoderActivity.class);
 			startActivity(intent);
 			finish();
 		}
@@ -107,7 +110,7 @@ public class SplashActivity extends Activity {
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
-				Intent intent = new Intent(SplashActivity.this, DefViewActivity.class);
+				Intent intent = new Intent(SplashActivity.this, ScreenRecoderActivity.class);
 				startActivity(intent);
 				finish();
 			}

@@ -7,6 +7,9 @@
         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
         <uses_permission android:name="android.permission.WRITE_MEDIA_STORAGE"/>
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -38,6 +41,7 @@
             </intent-filter>
         </activity>
 
+
         <activity android:name=".MainPage"></activity>
 
         <activity android:name=".FileIO.FileDlg">
@@ -58,6 +62,22 @@
         <activity android:name=".LoadActivity"></activity>
 
         <activity android:name=".DefView.DefViewActivity"></activity>
+
+        <activity android:name=".EasyBtn.SoEasy"></activity>
+
+        <activity android:name=".AlertBubble.BubbleMain"></activity>
+
+        <activity android:name=".fragment.FragmentNestActivity"></activity>
+
+        <activity android:name=".fragment.GLFragment.GLFragmentActivity"></activity>
+
+        <activity android:name=".ScreenRecoder.ScreenRecoderActivity"></activity>
+        <activity android:name=".ScreenRecoder.ScreenCut"></activity>
+
+        <activity android:name=".DeskAssist.Activity.AssistMain"></activity>
+        <service android:name="com.lcmf.xll.recyclerviewdemo.EasyBtn.EasyService" />
+        <service android:name=".DeskAssist.Service.AssistService"></service>
+        <service android:name="com.lcmf.xll.recyclerviewdemo.AlertBubble.BubbleService"></service>
 
     </application>
 
