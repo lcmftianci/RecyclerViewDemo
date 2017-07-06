@@ -27,7 +27,7 @@ import static android.content.ContentValues.TAG;
  *
  *
  */
-
+//此功能需要API > 22
 public class ScreenCut extends Activity {
 	MediaProjectionManager mMediaProjectionManager;
 	private VirtualDisplay mVirtualDisplay;

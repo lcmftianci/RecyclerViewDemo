@@ -5,12 +5,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.iflytek.cloud.SpeechUtility;
+import com.lcmf.xll.recyclerviewdemo.AlertBubble.BubbleMain;
 import com.lcmf.xll.recyclerviewdemo.DefView.DefViewActivity;
+import com.lcmf.xll.recyclerviewdemo.Notification3D.NotificationActivity;
 import com.lcmf.xll.recyclerviewdemo.ScreenRecoder.ScreenRecoderActivity;
 import com.lcmf.xll.recyclerviewdemo.fragment.FragmentNestActivity;
 import com.lcmf.xll.recyclerviewdemo.fragment.GLFragment.GLFragmentActivity;
@@ -34,7 +37,7 @@ public class SplashActivity extends Activity {
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
-
+		Log.v("---V---", "SplashActivity");
 		SpeechUtility.createUtility(SplashActivity.this, "appid=" + getString(R.string.app_id));
 
 		//init Animation

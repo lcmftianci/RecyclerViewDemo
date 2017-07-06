@@ -40,6 +40,7 @@ import java.util.jar.Manifest;
  *6:将Image对象转换成bitmap
  */
 
+//此功能需要API > 22
 public class ScreenRecoderActivity extends Activity {
 	private static final int RECORDER_CODE = 0;
 	private static final String TAG = "ScreenRecoderActivity";
